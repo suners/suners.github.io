@@ -6,7 +6,7 @@
 
 ## 运行了composer update 之后， passport授权出错， 报了如下错误：
 
-```php
+```
 You must set the encryption key going forward to improve the security of this library - see this page for more information https://oauth2.thephpleague.com/v5-security-improvements/
 
 ```
@@ -15,7 +15,7 @@ You must set the encryption key going forward to improve the security of this li
 
 ### 打开 vendor/laravel/passport/src/PassportServiceProvider.php， 找到 makeAuthorizationSever 方法，修改如下：
 
-```php
+```
 public function makeAuthorizationServer()
 {
     $server =  new AuthorizationServer(

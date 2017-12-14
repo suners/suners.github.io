@@ -1,8 +1,8 @@
----
-title: git常用命令整理
-date: 2016-07-07 14:30:00
-tags: git
----
+[^_^]:
+    title: git常用命令整理
+    date: 2016-7-7
+    tags: git
+    ---END
 
 ## 修改用户信息
 

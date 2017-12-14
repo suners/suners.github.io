@@ -1,10 +1,8 @@
----
-title: Laravel5.4 安装Passport 支持
-date: 2017-2-20 18:15:48
-tags: tool
----
-
-# Laravel5.4 安装Passport 支持
+[^_^]:
+    title: Laravel5.4 安装Passport 支持
+    date: 2017-2-20
+    tags: laravel
+    ---END
 
 ## A. 安装 Passport
 
@@ -129,7 +127,7 @@ npm install npm@latest -g
 ```
 
 如下图，将代码插入到home.blade.php中，可以看到
-![](./image/passport-default-components.png)
+![](./static/article_img/passport-default-components.png)
 
 ## C.测试API
 
@@ -139,8 +137,8 @@ http://localhost:8080 这里假设是本地的8080端口
 ```
 
 ### 2.创建 OAuth Clients
-![](./image/passport-edit-client.png)
-![](./image/passport-client-list.png)
+![](./static/article_img/passport-edit-client.png)
+![](./static/article_img/passport-client-list.png)
 
 
 ### 3.配置客户端路由
@@ -184,7 +182,7 @@ http://localhost:8080/authorize
 ```
 会跳转到server的授权页面
 
-![](./image/passport-authorization.png)
+![](./static/article_img/passport-authorization.png)
 
 点击了Authorize 之后会跳转到 callback 页面， 并通过code获得access_token等信息
 

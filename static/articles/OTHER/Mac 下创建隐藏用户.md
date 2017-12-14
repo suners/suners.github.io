@@ -1,4 +1,8 @@
-# Mac 下创建隐藏用户
+[^_^]:
+    title: Mac 下创建隐藏用户
+    date: 2017-3-8
+    tags: laravel
+    ---END
 
 ### Mac 下创建隐藏用户, 例如 nobody, nginx, mysql 用户等等, 这些是 Apache, Nginx, Mysql, PHP-fpm 等软件要用到的. 但是, 这些用户又不想它能登录系统.
 

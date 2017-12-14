@@ -1,8 +1,8 @@
----
-title: Laravel5.4 Restful APi Cors.php
-date: 2017-03-06 14:41:18
-tags: laravel vue
----
+[^_^]:
+    title: Laravel5.4 Restful APi Cors.php
+    date: 2017-3-6
+    tags: laravel
+    ---END
 
 # Laravel5.4 Restful Api Cors.php
 

@@ -1,13 +1,10 @@
----
-title: vue upload base64 image
-date: 2017-03-09 18:15:48
-tags: vue laravel
----
+[^_^]:
+    title: vue upload base64 image
+    date: 2017-3-9
+    tags: vue
+    ---END
 
-# Vue Upload base64 image
-vue 实现 base64图片的上传功能
-
-### vue 代码
+## vue 代码
 
 ```
 // 模板
@@ -42,7 +39,7 @@ submit () {
 
 ```
 
-### server端代码
+## server端代码
 这里server是用了Laravel + Intervention image
 
 ```

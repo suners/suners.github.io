@@ -1,8 +1,8 @@
----
-title: 安装gitolite
-date: 2016-07-07 14:41:18
-tags: git
----
+[^_^]:
+    title: 安装gitolite
+    date: 2016-7-7
+    tags: git
+    ---END
 
 ## 安装gitolite
 

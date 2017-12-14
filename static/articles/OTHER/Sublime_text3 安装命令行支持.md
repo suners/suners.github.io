@@ -1,12 +1,12 @@
----
-title: Sublime Text3 安装命令行支持
-date: 2016-07-28 18:15:48
-tags: tool
----
+[^_^]:
+    title: Sublime Text3 安装命令行支持
+    date: 2016-7-28
+    tags: tool
+    ---END
 
-#Sublime Text3 安装命令行支持
+## Sublime Text3 安装命令行支持
 
-## 1. 安装[Command Line](http://www.sublimetext.com/docs/3/osx_command_line.html)
+### 1. 安装[Command Line](http://www.sublimetext.com/docs/3/osx_command_line.html)
 
 *   如果不存在bin目录，就要新建个bin目录
 `mkdir ~/bin`
@@ -16,7 +16,7 @@ tags: tool
 `subl --help`
 *   成功记说安装完成
 
-## 2.安装[Terminal](https://packagecontrol.io/packages/Terminal)
+### 2.安装[Terminal](https://packagecontrol.io/packages/Terminal)
 
 *   用 command+shift+p 打开 Package Control 并输入 Install Package
 *   找到 Terminal 并安装
