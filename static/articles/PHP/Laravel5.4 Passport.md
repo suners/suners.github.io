@@ -24,8 +24,7 @@ php artisan passport:install
 ```
 
 ### 4.修改 User class, 导入 Laravel\Passport\HasApiTokens
-```
-<?php
+```php
 
 namespace App;
 
@@ -41,11 +40,11 @@ class User extends Authenticatable
 ```
 
 ### 5.添加 OAuth2 router 到 AuthServiceProvider 中, 并在 boot() 中运行 Passport::routers()
-```
+```php
 use Laravel\Passport\Passport;
 ```
 
-```
+```php
 // AuthServiceProvider
 public function boot()
 {
@@ -58,7 +57,7 @@ public function boot()
 ```
 
 ### 6.修改 config/auth.php , guards.api.driver;
-```
+```php
 return [
     ...
     'guards' => [
@@ -72,19 +71,19 @@ return [
 ```
 
 ### 7.运行 make:auth, 生成用户登录注册系统
-```
+```php
 php artisan make:auth
 ```
 
 ### 8.加入Vue Components
-```
+```php
 php artisan vendor:publish --tag=passport-components
 ```
 
 ## B.启用 Passport Vue Components (可选)
 
 ### 1.在resources/assets/js/app.js 中加入以下配置
-```
+```php
 Vue.component(
     'passport-clients',
     require('./components/passport/Clients.vue')
@@ -102,20 +101,20 @@ Vue.component(
 ```
 
 ### 2.安装node依赖
-```
+```shell
 npm install
 ```
 
-```
+```shell
 npm run dev
 ```
 如果运行出错，则升级下npm，在运行上面的命令
-```
+```shell
 npm install npm@latest -g
 ```
 
 ### 3.将下面组件插入到你要用到的页面中
-```
+```php
 <!-- let people make clients -->
 <passport-clients></passport-clients>
 
@@ -142,7 +141,7 @@ http://localhost:8080 这里假设是本地的8080端口
 
 
 ### 3.配置客户端路由
-```
+```php
 Route::get('authorize', function () {
     // Build the query parameter string to pass auth information to our request
     $query = http_build_query([
@@ -189,13 +188,11 @@ http://localhost:8080/authorize
 ## D.解决 vue2.0 和 laravel 跨域
 
 ### 1.构建CORS响应域
-```
+```shell
 php artisan make:middleware Cors
 ```
 
-```
-<?php
-
+```php
 namespace App\Http\Middleware;
 
 use Closure;
@@ -229,7 +226,7 @@ class Cors
 ```
 
 ### 2.修改 laravel_domain/app/Http/Kernel.php ，将 `\App\Http\Middleware\Cors::class` 添加到$middleware中
-```
+```php
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
@@ -242,7 +239,7 @@ class Cors
 ## E.用 vue resource 调用API 获取token
 
 ### 1.authorize 页面
-```
+```javascript
 <script>
 export default {
 
@@ -269,7 +266,7 @@ export default {
 ```
 
 ### 2.callback 页面
-```
+```javascript
 <script>
 export default {
 
@@ -305,7 +302,7 @@ export default {
 ```
 
 ### 3.通过获取的 access_token 获取用户信息
-```
+```javascript
 <script>
 export default {
 

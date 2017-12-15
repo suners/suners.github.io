@@ -10,8 +10,7 @@
 
 ### 修改 app/http/Middleware/Cors.php
 
-```
-<?php
+```php
 
 namespace App\Http\Middleware;
 
@@ -64,7 +63,7 @@ class Cors
 
 ### 添加测试方法
 
-```
+```php
 public function update($id)
 {
         return response('OK', 200);
@@ -73,13 +72,13 @@ public function update($id)
 
 ### 添加路径
 
-```
+```php
 Route::put('/versions/{id}', 'VersionsController@update');
 ```
 
 ### Vue 调用api
 
-```
+```javascript
 let url = this._appConf.TWS_RESTFUL_URL + '/api/versions/' + this.editData.id
 
 this.$http.put(url, formData, {emulateJSON: true})

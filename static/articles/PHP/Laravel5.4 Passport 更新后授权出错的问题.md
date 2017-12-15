@@ -15,7 +15,7 @@ You must set the encryption key going forward to improve the security of this li
 
 ### 打开 vendor/laravel/passport/src/PassportServiceProvider.php， 找到 makeAuthorizationSever 方法，修改如下：
 
-```
+```php
 public function makeAuthorizationServer()
 {
     $server =  new AuthorizationServer(

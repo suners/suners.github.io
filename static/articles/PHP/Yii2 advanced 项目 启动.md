@@ -14,7 +14,7 @@ Document root "/Users/wuzebin/Sites/git/coding/yii2advanced/console/web" does no
 
 ## 正确的启动如下：
 
-```
+```shell
 ./yii serve --docroot="frontend/web/"
 
 ```
