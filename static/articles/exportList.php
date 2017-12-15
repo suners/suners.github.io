@@ -42,7 +42,7 @@ foreach ($allRootFiles as $file) {
     }
 }
 
-file_put_contents('./category.json', json_encode($category));
+// file_put_contents('./category.json', json_encode($category));
 
 // 对md文件排序
 $newList = [];
@@ -94,16 +94,17 @@ function getNoteArr($mdContent)
 function sortList($mdList)
 {
     $len = count($mdList);
-    for ($k=0; $k <= $len; $k++) {
 
-        for ($j = $len-1; $j > $k; $j--) {
+    for($k=1; $k<$len; $k++){
+
+        for($j=0; $j<$len-$k; $j++){
             $timeA = strtotime($mdList[$j]['notes']['date']);
-            $timeB = strtotime($mdList[$j-1]['notes']['date']);
+            $timeB = strtotime($mdList[$j+1]['notes']['date']);
 
-            if ($mdList[$j] > $mdList[$j-1]) {
-                $temp = $mdList[$j];
-                $mdList[$j] = $mdList[$j-1];
-                $mdList[$j-1] = $temp;
+            if($timeA < $timeB){
+                $temp = $mdList[$j+1];
+                $mdList[$j+1] = $mdList[$j];
+                $mdList[$j] = $temp;
             }
         }
 
